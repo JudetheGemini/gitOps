@@ -1,0 +1,17 @@
+# git-clone-task.yaml
+apiVersion: tekton.dev/v1
+kind: Task
+metadata:
+  name: git-clone
+spec:
+  workspaces:
+    - name: output
+  params:
+    - name: url
+    - name: revision
+      default: main
+  steps:
+    - name: clone
+      image: alpine/git
+      script: |
+        git clone $(params.url) --branch $(params.revision) --single-branch $(workspaces.output.path)
