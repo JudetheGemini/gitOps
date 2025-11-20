@@ -38,6 +38,6 @@ jobs:
         sed -i "s|judethegemini/demoapp:.*|judethegemini/demoapp:${{ steps.tag.outputs.IMAGE_TAG }}|" ./app/demo/deployment.yaml
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add gitOps/app/demo/deployment.yaml
+        git add ./app/demo/deployment.yaml
         git commit -m "Update image to ${{ steps.tag.outputs.IMAGE_TAG }}"
         git push
