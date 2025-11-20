@@ -2,8 +2,8 @@ name: Build and Deploy
 
 on:
   push:
-    branches: [main]
-    paths: ['gitOps/app/demo/**']
+    branches: [demo]
+    # paths: ['gitOps/app/demo/**']
 
 jobs:
   build-and-deploy:
