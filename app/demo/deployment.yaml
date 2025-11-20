@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: demo-app
-        image: judethegemini/demoapp:cf35cae
+        image: judethegemini/demoapp:a706722
         ports:
         - containerPort: 3000
         resources:
