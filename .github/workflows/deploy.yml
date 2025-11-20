@@ -3,7 +3,7 @@ name: Build and Deploy
 on:
   push:
     branches: [demo]
-    # paths: ['gitOps/app/demo/**']
+    paths: ['gitOps/app/demo/**']
 
 jobs:
   build-and-deploy:
