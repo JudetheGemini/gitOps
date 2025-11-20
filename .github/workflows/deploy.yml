@@ -36,9 +36,9 @@ jobs:
 
     - name: Update deployment
       run: |
-        sed -i "s|judethegemini/demoapp:.*|judethegemini/demoapp:${{ steps.tag.outputs.IMAGE_TAG }}|" ./app/demo/deployment.yaml
+        sed -i "s|judethegemini/demoapp:.*|judethegemini/demoapp:${{ steps.tag.outputs.IMAGE_TAG }}|" ./app/demo/k8s/deployment.yaml
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add ./app/demo/deployment.yaml
+        git add ./app/demo/k8s/deployment.yaml
         git commit -m "Update image to ${{ steps.tag.outputs.IMAGE_TAG }}"
         git push
