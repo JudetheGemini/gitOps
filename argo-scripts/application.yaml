@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/JudetheGemini/gitOps.git
     targetRevision: demo
-    path: task-2
+    path: app/demo/k8s
   destination:
     server: https://kubernetes.default.svc
     namespace: default
